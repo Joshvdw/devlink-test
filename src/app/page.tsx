@@ -26,12 +26,14 @@ export default function Home() {
       <div style={{ display: "flex", flexWrap: "wrap", padding: "10px" }}>
         {data.length > 0 &&
           data.map((events: any) => (
-            <CardComponent
-              name={events.name}
-              image={events.image}
-              date={events.dates}
-              keywords={events.tags}
-            />
+            <div key={events.id}>
+              <CardComponent
+                name={events.name}
+                image={events.image}
+                date={events.dates}
+                keywords={events.tags}
+              />
+            </div>
           ))}
       </div>
     </>
